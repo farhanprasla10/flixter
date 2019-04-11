@@ -1,1 +1,19 @@
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Merriweather:900
+
+body {
+  font-family: 'Merriweather', serif;
+}
+
+.navbar {
+  font-family: 'Merriweather', serif;
+  font-weight: 200;
+  box-shadow: 0px 1px 3px #2a2a2a;
+  background: image_url('2.png');
+}
+
+.navbar-inverse a.navbar-brand {
+  font-family: 'Merriweather', serif;
+  font-weight: 100;
+  color: white;
+}
