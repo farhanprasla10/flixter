@@ -1,14 +1,11 @@
 <script>
-  $(function() {
+$(function() {
     $('.new-lesson-button').click(function( event ) {
-      var lessonUrl = $( event.target).data('lesson-url');
-    $('#newLessonForm').attr('action', lessonUrl);
-    });
-</script>
+        var lessonUrl = $( event.target).data('lesson-url');
+        $('#newLessonForm').attr('action', lessonUrl);
+      });
 
-<script>
-  $(function() {
-   $('.lessons li').sortable({ 
+    $('.lessons').sortable({
       update: function( event, ui ) {
         $.ajax({
           type: 'PUT',
@@ -18,24 +15,21 @@
         });
       }
     });
-  });
-</script>
 
-<script>
-  $(function() {
+
     $('.sections').sortable({
-       update: function( event, ui ) {
+      update: function( event, ui ) {
         $.ajax({
           type: 'PUT',
           url: ui.item.data('update-url'),
           dataType: 'json',
-          data: { lesson: { row_order_position: ui.item.index() } }
+          data: { section: { row_order_position: ui.item.index() } }
         });
       }
     });
+
   });
 </script>
-
 
 <br />
 <div class="booyah-box col-10 offset-1">
@@ -60,10 +54,12 @@
           <span class="fa fa-ellipsis-v"></span>
           <%= section.title %>
          </div>
+         <div class="float-right">
            <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary btn-lg float-right new-lesson-button" data-toggle="modal" data-target="#newLessonModal" data-lesson-url="<%= instructor_section_lessons_path(section) %>">
-            New Lesson...
-          </button>
+         <button type="button" class="btn btn-primary btn-lg float-right new-lesson-button" data-toggle="modal" data-target="#newLessonModal" data-lesson-url="<%= instructor_section_lessons_path(section) %>">
+          New Lesson...
+        </button>
+      </div>
 
           <br class="clr" />
           <br class="clr" />
@@ -101,7 +97,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">×</span>
+          <span aria-hidden="true"></span>
         </button>
         <h4 class="modal-title" id="newSectionModalLabel">Add a new section</h4>
       </div>
@@ -124,7 +120,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">×</span>
+          <span aria-hidden="true"></span>
         </button>
          <h4 class="modal-title" id="newLessonModalLabel">Add a new lesson</h4>
       </div>
