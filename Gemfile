@@ -82,4 +82,5 @@ gem 'stripe'
 gem 'ranked-model'
 gem 'jquery-ui-rails'
 
+gem "aws-sdk-s3", require: false
 
