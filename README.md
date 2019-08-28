@@ -1,26 +1,23 @@
-# README
+# Overview
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Flixter application has complex user interface and advance database relationship. Flixter is for online courses where instructor can upload different courses with video. Student can purchase course according to what they want to learn with featuring credit card payment capabilities.
 
-Things you may want to cover:
+## Courses 
 
-* Ruby version
+Insturctor can provide course title, description and whatever amount insturctor want's to put.
 
-* System dependencies
+![1](https://user-images.githubusercontent.com/48190085/63884562-6a7e6a80-c9a4-11e9-84be-bdb2211d51a4.jpg)
 
-* Configuration
+## Section -> Lesson
 
-* Database creation
+Course will include a number of sections (groupings of videos), and each section will include a number of video lessons.
 
-* Database initialization
+![2](https://user-images.githubusercontent.com/48190085/63885645-c813b680-c9a6-11e9-9cad-cf36289c0e0a.jpg)
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Student perview page 
 
-* Deployment instructions
+![1](https://user-images.githubusercontent.com/48190085/63885966-74559d00-c9a7-11e9-81ef-6e46e8f5c344.jpg)
 
-* ...
-# flixterproject
-# flixterproject
+
+
